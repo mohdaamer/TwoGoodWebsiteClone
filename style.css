@@ -10,6 +10,38 @@
 html,body{
     width: 100%;
     height: 100%;
+    background-color: #F7F7F7;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.links{
+    display: flex;
+}
+.links>a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 2vw;
+    margin-top: .5vw;
+    text-transform: uppercase;
+    font-family: poppins;
+    font-size: .9vw;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+#icons>i{
+    padding: 0 2vw;
+    cursor: pointer;
 }
 #page1{
     width: 100%;
@@ -78,12 +110,101 @@ html,body{
 }
 #page3{
     width: 100%;
-    height: 100vh;
-    background-color: #F7F7F7;
+    padding: 0 3vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
+.text-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.text-content>h1{
+    font-family: futura;
+    text-transform: uppercase;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    letter-spacing: -3px;
+}
+.text-content .para{
+    width: 30%;
+    margin-right: 4vw;
+}
+.para>p{
+    font-family: poppins;
+    padding: 1vw 3vw;
+}
+.child{
+    height: 80vh;
+    width: 40vw;
+    margin: 3vw;
+}
+.child>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.child>h1{
+    font-family: poppins;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1vw;
+}
+.child>span{
+    display: block;
+    padding: .2vw 0;
+    text-align: center;
+}
+#child3 , #child4{
+    margin-top: 15vw;
+}
 
-
+#page4{
+    width: 100%;
+    min-height: 100vh;
+}
+.heading{
+    padding: 5vw 0;
+}
+.heading>h1{
+    text-align: center;
+    font-family: futura;
+    font-size: 4vw;
+    line-height: 5vw;
+    letter-spacing: -3px;
+}
+.btnwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnwrapper>button{
+    width: 25vw;
+    height: 8vh;
+    margin: auto;
+    border-radius: 25px;
+    font-family: poppins;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+/* Mouse Follower Over a main  */
+#cursor{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
 /* Responsive  */
 @media (max-width:600px){
 
@@ -91,7 +212,7 @@ html,body{
         width: 100%;
         min-height: 70vh;
         padding: 0 5vw;
-        padding-top: 25vh;
+        padding-top: 15vh;
     }
 
     #page1>h1{
@@ -125,6 +246,80 @@ html,body{
     .elem{
         width: 100%;
         overflow: hidden;
-        padding-top: 3vw;
+        padding-top: 1vw;
     }
+    .links>a{
+        display: none;
+    }
+    .logo>svg{
+        width: 15vw;
+    }
+
+    #page3{
+        width: 100%;
+        padding: 0 3vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .text-content{
+        display: none;
+    }
+    .child{
+        height: 80vh;
+        width: 88vw;
+        padding: 10vw;
+    }
+    .child>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .child>h1{
+        font-family: poppins;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 5vw;
+    }
+    .child>span{
+        display: block;
+        padding: .2vw 0;
+        text-align: center;
+    }
+    #page4{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .heading{
+        padding: 9vw 5vw;
+    }
+    .heading>h1{
+        text-align: center;
+        font-family: futura;
+        font-size: 5vw;
+        line-height: 8vw;
+        letter-spacing: 0;
+    }
+    .btnwrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btnwrapper>button{
+        width: 65vw;
+        height: 8vh;
+        margin: auto;
+        border-radius: 25px;
+        font-family: poppins;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+    }
+    
 }
